@@ -23,7 +23,7 @@
 
 \usepackage{url}
 \usepackage{ulem}
-\usepackage{animate}
+\usepackage{xmpmulti}
 
 % Please add the following required packages to your document preamble:
 \usepackage{xcolor}
@@ -214,23 +214,10 @@ More gender diversity generally means
 \begin{frame}{Macro and micro agressions}
 \end{frame}
 \begin{frame}{Petrie multiplier}
-	\begin{columns}
-		\begin{column}{0.5\textwidth}
-			\animategraphics[loop,controls,width=4cm]{10}{petrie-}
-		\end{column}
-		\begin{column}{0.5\textwidth}
-			\begin{itemize}
-				\item Proposed by Karen Petrie, made popular by Ian Gent (who also made the gif).\footnote{Extensions of this have been proposed: \url{https://doi.org/10.1088/1751-8113/48/27/27FT01}}
-					\pause
-				\item Lean In
-					\pause
-				\item Lean Out
-					\pause
-				\item Lean sideways?
-			\end{itemize}
-
-		\end{column}
-	\end{columns}
+	\transduration<0-71>{0}
+	\multiinclude[<+->][format=png, graphics={width=5cm}]{petrie}
+				
+			Proposed by Karen Petrie, made popular by Ian Gent (who also made the gif).\footnote{Extensions of this have been proposed: \url{https://doi.org/10.1088/1751-8113/48/27/27FT01}}
 \end{frame}
 \begin{frame}{Diversity tax}
 \end{frame}
