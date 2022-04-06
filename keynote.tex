@@ -1,4 +1,4 @@
-\documentclass[xcolor=table]{beamer}
+\documentclass[xcolor=table,aspectratio=169]{beamer}
 
 \graphicspath{{figs/}{./figs/}}
 \mode<presentation>
@@ -35,13 +35,21 @@
   \texttt{hmd1@aber.ac.uk}} 
 \date{}
 \institute[]{ACCU Keynote, March 2022\\
-  Aberystwyth University, Department of Computer Science}
+  Department of Computer Science, Aberystwyth University\\BCSWomen }
 
 
 
 %\beamerdefaultoverlayspecification{<+->}
 
 \AtBeginSection[]
+{
+  \begin{frame}<beamer>
+    \frametitle{Outline}
+    \tableofcontents[currentsection,currentsubsection,hideothersubsections]
+  \end{frame}
+}
+
+\AtBeginSubsection[]
 {
   \begin{frame}<beamer>
     \frametitle{Outline}
@@ -68,17 +76,24 @@
 		\item Started the UK's first conference for women undergrads
 	\end{itemize}
 \end{frame}
+\begin{frame}{What are you going to get out of this talk?}
+	\begin{itemize}
+		\item An introduction to a bunch of diversity related concepts and terms
+		\item Some ranty stuff
+		\item Some practical suggestions of things you can do
+	\end{itemize}
+\end{frame}
 
 \begin{frame}{Karen Sp\"{a}rck Jones} 
 	\begin{columns}
-		\begin{column}{0.5\textwidth}
+		\begin{column}{0.4\textwidth}
 
 	\includegraphics[width=4cm]{ksj.jpg}
 
 	\tiny{University of Cambridge, CC BY 2.5 \url{https://creativecommons.org/licenses/by/2.5}, via Wikimedia Commons}
 
 		\end{column}
-		\begin{column}{0.5\textwidth}
+		\begin{column}{0.6\textwidth}
 
 		``Computing is too important to be left to men''
 
@@ -99,6 +114,8 @@
 			\sout{Men are from mars, women are from venus} 
 
 			\vspace{0.5em}
+
+			\pause
 
 			People are from earth
 		\end{column}
@@ -134,7 +151,7 @@ It is simultaneously possible for there to be \ldots
 
 \begin{frame}{Diversity in tech isn't just gender}
 
-	When there's one clear majority group in a profession, that dominant group's characteristics tend to dominate the profession.  Sociologists talk about``\textbf{Gender role spillover}'' or ``sex role spillover'' when analysing professions with major gender imbalances
+	When there's one clear majority group in a profession, that dominant group's characteristics tend to dominate the profession.  Sociologists talk about``\textbf{Gender role spillover}''  wrt gender imbalances
 
 
 	\vspace{0.5em}
@@ -143,19 +160,19 @@ It is simultaneously possible for there to be \ldots
 
 	\vspace{0.5em}
 
-	With other characteristics (age, disability, gender reassignment, marriage and civil partnership, pregnancy and maternity, race, religion or belief, sex, sexual orientation) it's harder to point to a norm, but we need to think about these and also about \textbf{intersectionality}.
+	Age, disability, gender reassignment, marriage and civil partnership, pregnancy and maternity, race, religion or belief, sex, sexual orientation. Also, class. 
+
+
+	\vspace{0.5em}
+
+
+	It's harder to point to a norm, but we need to think about these and also about \textbf{intersectionality}.
 
 \end{frame}
 \section{Why}
 
-\subsection{It's bad for business}
-
-\begin{frame}{McKinsey etc. }
-
-\end{frame}
-\begin{frame}{Diverse boards}
-
-	Financial Reporting council (FRC), 2021, FT350:
+\begin{frame}{The business case for diversity\ldots}
+	\ldots is well-made in a lot of places, recently Financial Reporting council (FRC), 2021, FT350:
 
 More gender diversity generally means 
 	\begin{itemize}
@@ -188,58 +205,116 @@ More gender diversity generally means
 		\end{column}
 	\end{columns}
 \end{frame}
-\subsection{It's bad for tech}
-\begin{frame}{we design better tech when we consider all the users. }
 
+\begin{frame}{We design better tech when we consider all the users. }
+	\begin{itemize}
+		\item Why are Alexa, Cortana and Siri all female voices?
+		\item Why have health tracking apps only just started to consider periods?
+		\item Voice recognition systems don't work as well with female voices
+		\item Face recognition systems don't work as well with Black faces
+		\item Why is the first option for gender nearly always Male?
+		\item Why do forms still insist gender is binary?
+	\end{itemize}
 \end{frame}
 \begin{frame}{The default male}
-\end{frame}
-\begin{frame}{Period trackers and menopause apps}
-\end{frame}
-\begin{frame}{Other examples}
-\end{frame}
-\begin{frame}{Technical imperative}
-\end{frame}
-
-\subsection{It's bad for women}
-\begin{frame}{being in a minority isn't fun }
-
-\end{frame}
-\begin{frame}{Stereotype threat}
-\end{frame}
-\begin{frame}{Self efficacy}
+	\begin{columns}
+		\begin{column}{0.8\textwidth}
+	\begin{itemize}
+		\item ``If you ask a software engineer what version control they use, he'll say bitbucket.''
+		\item ``Here come the beards'' (sorry!)
+		\item It's not just tech. Caroline Criado Perez has done a lot of work highlighting this across all fields\footnote{Her newsletter is great: \url{https://carolinecriadoperez.com/}}
+			\begin{itemize}
+		\item Even nonexistent faces perceived through pareidolia are more likely to be male \footnote{No, really: \url{https://doi.org/10.1073/pnas.2117413119}}
+	\end{itemize}
+	\end{itemize}
+	\end{column}
+	\begin{column}{0.2\textwidth}
+	\includegraphics[width=0.8\textwidth]{lena.png}
+	\end{column}
+	\end{columns}
 \end{frame}
 \begin{frame}{Sense of belonging }
+	\begin{itemize}
+		\item Ever been the only X in the room ?
+			\pause
+		\item Ever been told to your face that computing isn't for you ?
+			\pause
+		\item Ever been told you're a good role model?
+	\end{itemize}
+If people do not perceive themselves as belonging in a field, then they're not motivated to join it in the first place, or stay in it. 
+
 \end{frame}
-\begin{frame}{Macro and micro agressions}
+
+\begin{frame}{Stereotype threat}
+	When people are primed to think of themselves as part of a group which is associated with a stereotype, they perform in a way which is more conforming to the stereotype. \footnote{See e.g. \url{https://dx.doi.org/10.1371/journal.pone.0146487}}
+
+	\vspace{0.5em}
+	This effect has been shown in 300+ studies across a lot of different domains
+	\begin{itemize}
+		\item Gender
+		\item Race
+		\item Socioeconomic group
+		\item Age
+	\end{itemize}
 \end{frame}
+\begin{frame}{Self efficacy}
+How effective people think they're going to be at a task influences all sorts of aspects of their performance.
+
+	\vspace{0.5em}
+
+There are gender differences in self-efficacy (even?) when controlling for ability \footnote{See e.g. \url{https://link.aps.org/doi/10.1103/PhysRevPhysEducRes.14.020123}}
+	\begin{itemize}
+		\item Higher self-efficacy leads to better problem solving (less likely to reject correct hypotheses prematurely)
+		\item Self-efficacy levels influence choice of task
+		\item Self-efficacy levels influence enjoyment of tasks
+	\end{itemize}
+\end{frame}
+\begin{frame}{Micro aggressions}
+	Leaving aside the macro aggressions (for now) \ldots
+	
+	\vspace{0.5em}
+
+	The term microaggression makes it seem unimportant
+
+	\begin{itemize}
+		\item Hearing demeaning remarks about you
+		\item Being mistaken for someone at a lower level
+		\item Needing to provide more evidence of your competence
+		\item Having your contributions ignored
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{Being in a minority isn't fun }
+	\begin{itemize}
+		\item Ever been asked to make the tea?
+			\pause
+		\item Ever been asked if you can put someone through to the boss?
+			\pause
+		\item Ever been assumed to be in sales?
+	\end{itemize}
+But is it inevitable?
+\end{frame}
+
 \begin{frame}{Petrie multiplier}
 	\transduration<0-71>{0}
 	\multiinclude[<+->][format=png, graphics={width=5cm}]{petrie}
 				
 			Proposed by Karen Petrie, made popular by Ian Gent (who also made the gif).\footnote{Extensions of this have been proposed: \url{https://doi.org/10.1088/1751-8113/48/27/27FT01}}
 \end{frame}
+
+\begin{frame}{What does Petrie tell us?}
+
+	Gent: ``With 20\% women the gender ratio is 1:4. So there are 4 times as many men to make sexist remarks, so 4 times as many sexist remarks are made to women as to men. But there are 4 times fewer women to receive sexist remarks, so each individual woman is four times as likely to receive a given remark than an individual man is. These effects multiply, so in this example the mean number of sexist remarks per woman is 16 times the number per man. This holds in general, so with a gender ratio of $1:r$, women will receive $r^{2}$ times as many sexist remarks as men.''
+\end{frame}
+
+
 \begin{frame}{Diversity tax}
-\end{frame}
 
-\begin{frame}{Moral imperative}
-\end{frame}
-\subsection{It's bad for men}
-
-\begin{frame}{social}
-
-\end{frame}
-
-\begin{frame}{What's good for the goose is good for the gander}
-	``A profession that's good for women is good for all'' - Rebecca George 
-
-	\begin{itemize}
-		\item Childcare
-		\item Flexible working
-	\end{itemize}
-\end{frame}
-
-\begin{frame}{Self-interest}
+\begin{itemize}
+	\item There are some extra things which women do because they are in a minority in tech
+	\item There are some extra things which women do because women are more likely to do some kinds of task
+\end{itemize}
 
 \end{frame}
 
@@ -247,32 +322,70 @@ More gender diversity generally means
 
 \begin{frame}{Don't be that guy}
 
+	I'm not going to link to any of the many (many (many)) cases of sexual harassment at tech conferences and in tech companies. 
+
 \end{frame}
 
-\begin{frame}{Don't assume women are in sales}
+\begin{frame}{Don't hold women and minorities to a higher standard}
+	\begin{itemize}
+	\item Women can be technical
+	\item Guys can be in sales
+	\end{itemize}
 
 \end{frame}
 \begin{frame}{Don't talk over women}
 
+	If men and women talk for equal amounts of time, people report that the women have been talking too much. 
+
+	\vspace{0.5em}
+
+	Measure it: \url{http://arementalkingtoomuch.com/}
+
+
+	\vspace{0.5em}
+
+
+	Don't talk over women
+
 \end{frame}
 \begin{frame}{Don't pay women less}
 
+	Anyone here on twitter?
+
+	\vspace{0.5em}
+
+	Anyone here enjoy Pay Gap Bot on March 8? \url{https://twitter.com/PayGapApp}
 \end{frame}
 
 \section{Do do this}
 
 \begin{frame}{Be an ally}
 
+	Minorities are told they don't belong, are dealing with stereotype threat, micro-aggressions, and macro-aggressions.
+
+	\vspace{0.5em}
+
+	They could do with some support.
+
 \end{frame}
 \begin{frame}{The really easy stuff}
 	\begin{itemize}
 		\item Amplify women's voices
+		\item Don't go on a manel
 		\item Encourage women and girls : ``you can do this''
 		\item Talk about your salary
+		\item Learn about unconscious bias
 	\end{itemize}
 \end{frame}
 \begin{frame}{Learn about the law}
-	Discrimination first aider
+	A new thing: Discrimination first aider. 
+	
+	\vspace{0.5em}
+
+	This is first aid for people who are experiencing discrimination - exactly as it says on the tin. You'll learn how to act as that first responder in a crisis to support a victim of discrimination with triage tools like practical resources to address the issue and informed emotional support.
+
+	\vspace{0.5em}
+
 
 \end{frame}
 
@@ -304,18 +417,47 @@ More gender diversity generally means
 	\item Some countries can be dangerous for LGBT+ colleagues, or those from ethnic minorites
 	\end{itemize}
 \end{frame}
+\begin{frame}{Consider sense-of-belonging}
+One way to feel like you're not alone as a women in tech is to go to women in tech events 
+
+	\vspace{0.5em}
+
+	If you have women staff, provide time for them to do this (and travel, if needed)
+\end{frame}
 
 \begin{frame}{Consider homogenisation}
 	\begin{itemize}
 		\item Not every woman wants to get involved in diversity stuff.
+		\item Not every gay person wants to go to Pride
 		\item Not every asian colleague will be observing Ramadan right now. 
 		\item Not every colleague observing Ramandan right now will be asian.  
 	\end{itemize}
 \end{frame}
 
 \begin{frame}{Foster self-efficacy}
+
+	This goes for all people - but particularly minorities
+
+	\vspace{0.5em}
+
+	Confidence is really hard to build up and really easy to knock
+
+	\vspace{0.5em}
+
+	Compliments are cheap: be excellent to each other. If someone's done a good job, tell them. If someone's not sure they can do something (and you think they can), tell them.
+
 \end{frame}
 \begin{frame}{Foster a sense of belonging}
+
+	You belong here, I belong here, we all belong here 
+
+	\vspace{0.5em}
+
+	People should be able to bring their whole selves to work
+
+	\vspace{0.5em}
+
+Think about: catering, holidays, caring responsibilities, accessible spaces. 
 \end{frame}
 
 \begin{frame}{Consider intersectionality}
@@ -333,6 +475,22 @@ More gender diversity generally means
 		\end{itemize}
 	\end{itemize}
 	\end{frame}
+
+\begin{frame}{What's good for the gander is good for the goose}
+	``A profession that's better for women is good for all'' - Rebecca George 
+
+	\begin{itemize}
+		\item Better business
+		\item More, happier, diverse workforce
+		\item Better conditions
+	\end{itemize}
+	\vspace{0.5em}
+
+	Also, we've been trying to solve this for ages and we've not succeeded! We need your massive brains to helpus crack this one.
+
+\end{frame}
+
+
 \begin{frame}{Any questions?}
 
 	\begin{itemize}
